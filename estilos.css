@@ -7,6 +7,7 @@ header[name="superior"]{
 	background-size: 100% 100%;
 }
 
+<<<<<<< HEAD
 body{
 	height: 100%;
 	width: 100%;
@@ -26,6 +27,25 @@ body{
 fieldset {
 border:1px groove transparent; /* Borde */
 background:transparent; /* Color de fondo */
+=======
+#login{
+	float:left;
+	height: 80%;
+	width: 25%;
+	border: 1px solid transparent;
+	margin-top: 1px;
+	margin-left: 5%;
+}
+
+#imagen{
+	border-radius: 150px;
+	border: 50px;
+}
+
+fieldset {
+border:6px groove #ccc; /* Borde */
+background:#F8ECE0; /* Color de fondo */
+>>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 color:#000; /* Color del texto de todo el contenido */
 }
 
@@ -44,8 +64,11 @@ aside[name="izquierdo"]{
 	background:	url(Esquema\\ubuntu1.png) 0 0 no-repeat;
 	background-size: 100% 100%;
 	color:white;
+<<<<<<< HEAD
 	border-radius: 20px;
 	box-shadow: 7px 10px 2px black;
+=======
+>>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 }
 
 aside[name="derecho"]{
@@ -56,9 +79,12 @@ aside[name="derecho"]{
 	margin-top: 3px;
 	background:	url(Esquema\\ubuntu2.png) 0 0 no-repeat;
 	background-size: 100% 100%;
+<<<<<<< HEAD
 	color:white;
 	border-radius: 20px;
 	box-shadow: -7px 10px 2px black;
+=======
+>>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 }
 
 section{
@@ -70,7 +96,10 @@ section{
 	margin-right: 5px;
 	margin-top: 3px;
 	margin-bottom: 1%;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 }
 
 article{
@@ -78,11 +107,18 @@ article{
 	color:red;
 	height: 310px;
 	width: 22%;
+<<<<<<< HEAD
 	border: solid 1px transparent;
 	margin-left: 5px;
 	margin-top: 3px;
 	margin-bottom: 10px;
 	overflow: auto;
+=======
+	border: solid 2px purple;
+	margin-left: 5px;
+	margin-top: 3px;
+	margin-bottom: 10px;
+>>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 }
 
 footer[name="pie"]{

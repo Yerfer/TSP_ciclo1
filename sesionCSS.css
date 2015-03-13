@@ -1,5 +1,6 @@
 #login{
 	float:left;
+<<<<<<< HEAD
 	height: 370px;
 	width: 500px;
 	border: 1px solid transparent;
@@ -39,4 +40,23 @@ legend {
 	color:white; /* Color del título */
 	font-family: 'Akronim', cursive;
 	font-size:2.0em;
+=======
+	height: 80%;
+	width: 25%;
+	border: 1px solid transparent;
+	margin-top: 1px;
+	margin-left: 5%;
+}
+
+fieldset {
+border:6px groove #ccc; /* Borde */
+background:#F8ECE0; /* Color de fondo */
+color:#000; /* Color del texto de todo el contenido */
+}
+
+legend {
+text-align:left; 
+font-weight:bold; /* Estilo de la fuente del título */
+color:#61380B; /* Color del título */
+>>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 }
