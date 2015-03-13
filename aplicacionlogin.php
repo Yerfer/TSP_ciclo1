@@ -5,7 +5,6 @@
 		<title>VideoGames</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="estilos.css" />
-<<<<<<< HEAD
 		<style type="text/css"> 
 			A:link {text-decoration:none;color:WHITE;} 
 			A:visited {text-decoration:none;color:#ffcc33;} 
@@ -15,13 +14,7 @@
 	</head>
 
 	<body>
-		<form method="post" action="procesar.php" autocomplete="on">
-=======
-	</head>
-
-	<body>
 		<form method="post" action="js/procesarCheck.php" autocomplete="on">
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 			<header name="superior" title="Ikaros - Anime: Sora no Otoshimono">
 				<div id="login">		
 					<fieldset>
@@ -33,13 +26,6 @@
 								header("location:aplicacion.php");
 							} 
 							else {
-<<<<<<< HEAD
-						?>
-								<div id="bienvenido">
-								<h2>Bienvenido/a, <span><?php echo $_SESSION['session_username'];?>! </span></h2>
-								<input type="submit" name="apartar" value="Apartar" href="procesar.php">
-								<p><a href="logout.php">Cerrar Sesión</a></p>
-=======
 								$user=$_SESSION['session_username'];
 								$link = mysqli_connect("localhost","root","","videojuegos") or die("Error " . mysqli_error($link));
 								$consulta = "SELECT imagen FROM cliente WHERE nombre='$user'" or die("Error en la consulta" . mysqli_error($link));
@@ -52,7 +38,6 @@
 								</br/>
 								<input type="submit" name="apartar" value="Añadir Al Carrito De Compras" href="js/procesarCheck.php">
 								<p><a href="perfil.php">Perfil</a><?php echo " &#32";?><a href="logout.php">Cerrar Sesión</a></p>
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 								</div>
 								<?php
 							}
@@ -83,10 +68,7 @@
 						$i++;
 					}
 					echo " <li><a href='aplicacionlogin.php' method='post' name=categoria value='' >VISTA GENERAL</a> </li>";
-<<<<<<< HEAD
-=======
 					echo " <li><a href='carrito.php' method='post' name=carrito value='' >VER CARRITO</a> </li>";
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 					echo "</ul>";
 				?>				
 			</aside>
@@ -105,17 +87,11 @@
 						echo "
 							<article name='vg".$i."' title='".$row["descripcion"]."    Stock:".$row["stock"]."'>
 								<a href='vg_individual.php?juegos=$i'><img name='juegos' value='".$i."' src='".$row["imagen"]."' height=240px width=100% /></a>
-<<<<<<< HEAD
 								<div style='overflow: auto'>
 								Precio por Día:".$row["precio_dia"]."<br/>
 								Consola:".$row["consola"]."<br/>
 								<input name='vg".$i."' type='checkbox' value='vg".$i."' />".$row["nombre"]."
 								</div>
-=======
-								Precio por Día:".$row["precio_dia"]."<br/>
-								Consola:".$row["consola"]."<br/>
-								<input name='vg".$i."' type='checkbox' value=".$i." />".$row["nombre"]."
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 							</article>  ";
 						$i++;
 					}	 	

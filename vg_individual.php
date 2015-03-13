@@ -38,11 +38,7 @@
 						$categoria=$fila_categoria["nombre"];
 						
 						echo "							
-<<<<<<< HEAD
-						<form method='post' action='procesar.php'>
-=======
 						<form method='post' action='carrito.php'>
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 						<section name='juego'> 
 							<header>
 								<p name='nombre'><h2>Nombre del VideoJuego: </h2><h1>$nombre</h1></p>
@@ -55,21 +51,13 @@
 								<footer name='datos_pie'>
 									<p>Precio: $precio_dia</p>
 									";if(isset($_SESSION['session_username'])){
-<<<<<<< HEAD
-										echo "<input type='submit' name='vg".$id_vj."' value='Alquilar' />";
-=======
 										echo "<input type=hidden value='".$id_vj."' name='id'/>";
 										echo "<input type='submit' name='vg".$id_vj."' value='Añadir Al Carrito De Compras' />";
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 									}
 									else{
 										echo "<p>Si Quieres Alquilar Debes <a href='registrar.php' >Registrarte</a>!</p>";
 									}
-<<<<<<< HEAD
-									echo "<input type='submit' name='' value='Home Page' />
-=======
 									echo "<a href='aplicacionlogin.php'>Home page </a>
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 									<p>Descripción: $descripcion</p>
 									<p>Categoria: $categoria</p>
 								</footer>

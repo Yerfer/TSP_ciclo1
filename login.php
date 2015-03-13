@@ -14,11 +14,7 @@
 		
 		if($numrows==0){
 			$message = "cedula de usuario ó contraseña invalida!";
-<<<<<<< HEAD
 			header("Location: aplicacion.php");
-=======
-			header("Location: aplicacionlogin.php");
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 		}
 		
 		$row=mysqli_fetch_assoc($query);
@@ -30,9 +26,5 @@
 			$_SESSION['session_cedula']=$cedula;
 			header("Location: aplicacionlogin.php");
 		}
-<<<<<<< HEAD
-		
-=======
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 	}
 ?>

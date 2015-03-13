@@ -76,14 +76,22 @@
 
 	}
 ?>	
-	.<!DOCTYPE html>
+	<!DOCTYPE html>
 	<html lang="es">
 	<head>
 		<meta charset="utf-8"/>
 		<title>Carrito De Compras</title>
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		<link rel="stylesheet" href="carritoCSS.css" />
+		<style type="text/css"> 
+			A:link {text-decoration:none;color:WHITE;} 
+			A:visited {text-decoration:none;color:#ffcc33;} 
+			A:active {text-decoration:none;color:#ff0000;} 
+			A:hover {text-decoration:underline;color:#999999;} 
+		</style>
 	</head>
+	
 	<body>
 		<header>
 			<h1>Carrito De Compras</h1>

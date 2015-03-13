@@ -1,21 +1,16 @@
 <?php
-<<<<<<< HEAD
-
 	session_start();
 	if(isset($_SESSION["session_username"])){
 		header("Location: aplicacionlogin.php");
 	}
-=======
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
- 
+
 	if(isset($_POST["registrar"])){
  
 		$cedula=$_POST['cedula'];
 		$nombre=$_POST['nombre'];
 		$telefono=$_POST['telefono'];
 		$password=$_POST['pass'];
-<<<<<<< HEAD
-=======
+
 		$correo=$_POST['correo'];
 		//imagen
 		$ruta="imagenes";
@@ -23,27 +18,16 @@
 		$nombre_archivos=$_FILES['imagen']['name'];
 		move_uploaded_file($archivos,$ruta."/".$nombre_archivos);
 
-
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 		//conexion: 
 		$link = mysqli_connect("localhost","root","","videojuegos") or die("Error de conexion" . mysqli_error($link)); 
 		$consulta=mysqli_query($link, "SELECT * FROM cliente WHERE cedula='".$cedula."'") or die("Error en la consulta.." . mysqli_error($link));
 		$numrows=mysqli_num_rows($consulta);
-<<<<<<< HEAD
- 
-		if($numrows==0){
-			$insert="INSERT INTO cliente (cedula, nombre, telefono, password) VALUES('$cedula','$nombre', '$telefono', '$password')";
-			echo "$insert";
-			$result=mysqli_query($link,$insert)or die("Error en la conexion.." . mysqli_error($link));
- 
-=======
 
 		if($numrows==0){
 			$insert="INSERT INTO cliente (cedula, nombre, telefono, password, imagen,correo) VALUES('$cedula','$nombre', '$telefono', '$password','$nombre_archivos', '$correo')";
 			echo "$insert";
 			$result=mysqli_query($link,$insert)or die("Error en la conexion.." . mysqli_error($link));
-				
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
+
 			if($result){
 				$mensaje="Cuenta Correctamente Creada";
 			} 
@@ -56,15 +40,9 @@
 			$mensaje = "El Numero de Cedula ya existe! Por favor, verifica o Inicia Sesion";
 			echo"$mensaje";
 		}	
-<<<<<<< HEAD
 		echo "$mensaje";
-		//header("Location: aplicacion.php");
 		$_SESSION['session_username']=$nombre;
 		$_SESSION['session_cedula']=$cedula;
 		header("Location: aplicacionlogin.php");
-=======
-		echo"$mensaje";
-		header("Location: aplicacion.php");
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 	}
 ?>

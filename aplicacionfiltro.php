@@ -6,15 +6,12 @@
 		<title>VideoGames</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="estilos.css" />
-<<<<<<< HEAD
 		<style type="text/css"> 
 			A:link {text-decoration:none;color:WHITE;} 
 			A:visited {text-decoration:none;color:#ffcc33;} 
 			A:active {text-decoration:none;color:#ff0000;} 
 			A:hover {text-decoration:underline;color:#999999;} 
 		</style>
-=======
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 	</head>
 
 	<body>
@@ -73,10 +70,7 @@
 						$i++;
 					}
 					echo " <li><a href='aplicacionlogin.php' >VISTA GENERAL</a> </li>";
-<<<<<<< HEAD
-=======
 					echo " <li><a href='carrito.php' method='post' name=carrito value='' >VER CARRITO</a> </li>";
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 					echo "</ul>";
 				?>			
 				

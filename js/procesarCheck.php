@@ -94,5 +94,5 @@
 		}
 	}
 	
-	header("Location:http://localhost/TSP_ciclo1/carrito.php");
+	header("location:http://localhost/TSP_ciclo1/carrito.php");
 ?>

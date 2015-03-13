@@ -13,15 +13,12 @@
 		<title>Sesion</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="sesionCSS.css" />
-<<<<<<< HEAD
 		<style type="text/css"> 
 			A:link {text-decoration:none;color:#0000cc;} 
 			A:visited {text-decoration:none;color:#ffcc33;} 
 			A:active {text-decoration:none;color:#ff0000;} 
 			A:hover {text-decoration:underline;color:#999999;} 
 		</style>
-=======
->>>>>>> 925e6045fec3c888f356103ec00e292967fcb63b
 	</head>
 	
 	<body>
