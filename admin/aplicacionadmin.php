@@ -14,7 +14,7 @@
 	</head>
 
 	<body>
-		<form method="post" action="js/procesarCheck.php" autocomplete="on">
+		<form method="post" action="actualizarVJ.php" autocomplete="on" name="formulario">
 			<header name="superior" title="Ikaros - Anime: Sora no Otoshimono">
 				<div id="login">		
 					<fieldset>
@@ -23,21 +23,15 @@
 						<?php
 							session_start();
 							if(!isset($_SESSION["session_username"])) {
-								header("location:aplicacion.php");
+								header("location:..\aplicacion.php");
 							} 
 							else {
-								$user=$_SESSION['session_username'];
-								$link = mysqli_connect("localhost","root","","videojuegos") or die("Error " . mysqli_error($link));
-								$consulta = "SELECT imagen FROM cliente WHERE nombre='$user'" or die("Error en la consulta" . mysqli_error($link));
-								$result = mysqli_query($link, $consulta) or die("La consulta falló: " . mysqli_error($link));
-								$row = mysqli_fetch_array($result);
 						?>
 								<div id="bienvenido">
 								<h2>Bienvenido/a, <span><?php echo $_SESSION['session_username'];?>! </span></h2>
-								<?php echo "<img id='imagen' src='imagenes/".$row["imagen"]."' height='25%' width='25%' type='image'/>";?>
-								</br/>
-								<input type="submit" name="apartar" value="Añadir Al Carrito De Compras" href="js/procesarCheck.php">
-								<p><a href="perfil.php">Perfil</a><?php echo " &#32";?><a href="logout.php">Cerrar Sesión</a></p>
+								<input type="submit" name="actualizar" value="Actualizar" onclick="this.form; return true;">
+								<input type="submit" name="eliminar" value="Eliminar" onclick="formulario.action='eliminarVG.php'; return true;">									
+								<p><a href="..\logout.php">Cerrar Sesión</a></p>
 								</div>
 								<?php
 							}
@@ -68,7 +62,6 @@
 						$i++;
 					}
 					echo " <li><a href='aplicacionlogin.php' method='post' name=categoria value='' >VISTA GENERAL</a> </li>";
-					echo " <li><a href='carrito.php' method='post' name=carrito value='' >VER CARRITO</a> </li>";
 					echo "</ul>";
 				?>				
 			</aside>
@@ -86,11 +79,11 @@
 					while($row = mysqli_fetch_array($result)) { 
 						echo "
 							<article name='vg".$i."' title='".$row["descripcion"]."    Stock:".$row["stock"]."'>
-								<a href='vg_individual.php?juegos=$i'><img name='juegos' value='".$i."' src='".$row["imagen"]."' height=240px width=100% /></a>
+								<a href='vg_individual.php?juegos=".$row["id_vj"]."'><img name='juegos' value='".$i."' src='..\\".$row["imagen"]."' height=240px width=100% /></a>
 								<div style='overflow: auto'>
-									Precio por Día:".$row["precio_dia"]."<br/>
-									Consola:".$row["consola"]."<br/>
-									<input name='vg".$i."' type='checkbox' value='vg".$i."' />".$row["nombre"]."
+								Precio por Día:".$row["precio_dia"]."<br/>
+								Consola:".$row["consola"]."<br/>
+								<input name='vg".$i."' type='checkbox' value='vg".$i."' />".$row["nombre"]."
 								</div>
 							</article>  ";
 						$i++;
@@ -98,9 +91,15 @@
 				?>
 
 			</section>
-			
-			<aside name="derecho"> </aside>
-			<footer name="pie">	</footer>
 		</form>
+			<aside name="derecho"> 
+				<header>
+					<form method="get" action="crearVJ.php">
+						<input type="submit" name="crear" value="Crear VG"/>
+						<input type='number' name='cantidad' placeholder='Cantidad a Crear' />
+					</form>
+				</header>				
+			</aside>
+			<footer name="pie">	</footer>		
 	</body>
 </html>

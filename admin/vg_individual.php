@@ -58,7 +58,7 @@
 									else{
 										echo "<p>Si Quieres Alquilar Debes <a href='registrar.php' >Registrarte</a>!</p>";
 									}
-									echo "<a href='aplicacion.php'>Home page </a>
+									echo "<a href='aplicacionadmin.php'>Home page </a>
 									<p>Descripción: $descripcion</p>
 									<p>Categoria: $categoria</p>
 								</footer>
